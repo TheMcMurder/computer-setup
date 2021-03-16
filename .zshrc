@@ -12,7 +12,7 @@ alias P='cd ~/Development/personal'
 alias ngrok='~/ngrok'
 
 function commit-undo {
-  COUNT="${1:='1'}"
-  STRENGTH="${2:='soft'}"
+  COUNT="${1:=1}"
+  STRENGTH="${2:=soft}"
   git reset --$STRENGTH HEAD~$COUNT
 }
