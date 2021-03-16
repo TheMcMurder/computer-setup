@@ -1,8 +1,8 @@
 # Setup
 
-1. [Create Folder Structure](#create-folders)
-2. 
-[Setup git with multiple-identites](/git-with-multiple-identities.md)
+- [Create Folder Structure](#create-folders)
+- [Setup zshrc](./.zshrc)
+- [Setup git with multiple-identites](/git-with-multiple-identities.md)
 
 ## create folders
 ```zsh
