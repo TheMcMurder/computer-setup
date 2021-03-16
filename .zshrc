@@ -13,6 +13,8 @@ alias ngrok='~/ngrok'
 alias undo-soft="soft-undo"
 alias undo-hard="hard-undo"
 
+# Functions
+
 function hard-undo {
   COUNT="${1:=1}"
   commit-undo $COUNT hard
