@@ -10,6 +10,8 @@ alias ss='cd ~/Development/single-spa'
 alias W='cd ~/Development/work'
 alias P='cd ~/Development/personal'
 alias ngrok='~/ngrok'
+alias undo-soft="soft-undo"
+alias undo-hard="hard-undo"
 
 function hard-undo {
   COUNT="${1:=1}"
