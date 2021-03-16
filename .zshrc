@@ -11,6 +11,16 @@ alias W='cd ~/Development/work'
 alias P='cd ~/Development/personal'
 alias ngrok='~/ngrok'
 
+function hard-undo {
+  COUNT="${1:=1}"
+  commit-undo $COUNT hard
+}
+
+function soft-undo {
+  COUNT="${1:=1}"
+  commit-undo $COUNT hard
+}
+
 function commit-undo {
   COUNT="${1:=1}"
   STRENGTH="${2:=soft}"
