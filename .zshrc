@@ -22,7 +22,7 @@ function hard-undo {
 
 function soft-undo {
   COUNT="${1:=1}"
-  commit-undo $COUNT hard
+  commit-undo $COUNT soft
 }
 
 function commit-undo {
