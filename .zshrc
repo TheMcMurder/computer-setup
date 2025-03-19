@@ -4,7 +4,6 @@ alias gbr="git branch | grep -v "master" | xargs git branch -D"
 alias gbrm="git branch | grep -v "main" | xargs git branch -D"
 alias gs="git status"
 alias D='cd ~/Development/'
-alias ss='cd ~/Development/single-spa'
 alias W='cd ~/Development/work'
 alias P='cd ~/Development/personal'
 alias ngrok='~/ngrok'
