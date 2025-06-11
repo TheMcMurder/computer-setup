@@ -1,7 +1,8 @@
 # Aliases
 
-alias gbr="git branch | grep -v "master" | xargs git branch -D"
-alias gbrm="git branch | grep -v "main" | xargs git branch -D"
+alias gbr="gbn"
+alias gbrm="gbn"
+alias gbc="gbn"
 alias gs="git status"
 alias D='cd ~/Development/'
 alias W='cd ~/Development/work'
@@ -49,8 +50,32 @@ function gcm() {
     fi
 }
 
+## Git Branches Nuke - Remove all non main/master branches 
+function gbn() {
+
+    local default_branch
+    if git show-ref --quiet refs/heads/main; then
+        default_branch="main"
+    elif git show-ref --quiet refs/heads/master; then
+        default_branch="master"
+    else
+        default_branch=$(git remote show origin | sed -n '/HEAD branch/s/.*: //p')
+    fi
+
+    git branch | grep -v "$default_branch" | xargs git branch -D
+
+}
+
 ## This is a nice little helper for large repos, it runs "git pull origin *" where * is the provided branch name or the current branch
 function gpo() {
     local branch=${1:-$(git rev-parse --abbrev-ref HEAD)}
     git pull origin $branch
 }
+
+# Path stuff
+## Rust
+
+# Uncomment/correct these once installed
+# path+=("$HOME/.cargo/bin")
+
+export PATH
